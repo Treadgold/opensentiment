@@ -1,0 +1,91 @@
+{
+  "text_samples": [
+    {
+      "id": "political_left_1",
+      "content": "We must strengthen social welfare programs and implement universal healthcare. The government needs to take a more active role in protecting workers' rights and ensuring economic equality.",
+      "expected": {
+        "political_sentiment": {
+          "score": 25,
+          "label": "LEFT"
+        }
+      }
+    },
+    {
+      "id": "political_right_1",
+      "content": "Free market capitalism and deregulation are key to economic growth. We need to reduce government spending and lower taxes to stimulate business development.",
+      "expected": {
+        "political_sentiment": {
+          "score": 75,
+          "label": "RIGHT"
+        }
+      }
+    },
+    {
+      "id": "political_center_1",
+      "content": "While market forces are important for economic growth, reasonable regulation ensures fair competition. Both public and private healthcare options should be available to citizens.",
+      "expected": {
+        "political_sentiment": {
+          "score": 50,
+          "label": "CENTER"
+        }
+      }
+    }
+  ],
+  "url_samples": [
+    {
+      "id": "news_article_1",
+      "url": "https://www.bbc.com/news/articles/c9vygkzkkrvo",
+      "expected": {
+        "is_article": true,
+        "domain": "bbc.com",
+        "content_type": "news"
+      }
+    },
+    {
+      "id": "blog_post_1",
+      "url": "https://medium.com/live-view/finding-my-photo-mojo-light-and-equanimity-in-the-desert-b1d453624782",
+      "expected": {
+        "is_article": true,
+        "domain": "medium.com",
+        "content_type": "blog"
+      }
+    }
+  ],
+  "edge_cases": [
+    {
+      "id": "mixed_sentiment_1",
+      "content": "While supporting free market principles, we must ensure strong environmental regulations and social safety nets.",
+      "expected": {
+        "political_sentiment": {
+          "score": 55,
+          "label": "CENTER"
+        }
+      }
+    },
+    {
+      "id": "non_political_1",
+      "content": "The weather is beautiful today. I love spending time in nature.",
+      "expected": {
+        "political_sentiment": {
+          "score": 50,
+          "label": "CENTER",
+          "confidence": "<0.5"
+        }
+      }
+    }
+  ],
+  "duplicate_detection": [
+    {
+      "id": "duplicate_1a",
+      "url": "https://news-site-a.com/article-1",
+      "content": "Specific article content here...",
+      "duplicate_of": null
+    },
+    {
+      "id": "duplicate_1b",
+      "url": "https://news-site-b.com/similar-article",
+      "content": "Slightly reworded but same article content...",
+      "duplicate_of": "duplicate_1a"
+    }
+  ]
+} 
