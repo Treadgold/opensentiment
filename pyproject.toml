@@ -18,6 +18,15 @@ dependencies = [
     "transformers>=4.0.0",
     "numpy>=1.20.0",
     "scikit-learn>=1.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "redis>=5.0.0",
+    "asyncpg>=0.28.0",
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.11.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "prometheus-client>=0.17.0",
 ]
 
 [project.optional-dependencies]
@@ -26,6 +35,8 @@ dev = [
     "black>=22.0",
     "isort>=5.0",
     "mypy>=0.900",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.24.0",
 ]
 
 [tool.pytest.ini_options]
